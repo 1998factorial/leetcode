@@ -1,3 +1,8 @@
+"""
+    rule A,B are two sorted arrays
+    return median of (A+B) in time O(log(n))
+    * A+B <=> list generated after merging A and B
+"""
 class Solution:
     def findMedianSortedArrays(self, nums1, nums2):
         """

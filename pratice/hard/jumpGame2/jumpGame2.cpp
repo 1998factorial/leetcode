@@ -1,3 +1,10 @@
+/*
+	rule:
+	eg. [2,3,1,1,5]
+	2->3
+	3->5
+	=> 2
+*/
 class Solution{
 public:
 	int getNext(vector<int>& nums, int k){
