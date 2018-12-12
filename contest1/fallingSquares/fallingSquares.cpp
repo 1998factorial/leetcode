@@ -35,3 +35,10 @@ public:
         return heights;
     }
 };
+/*
+    things learned:
+    1. the use of hash map (key as pair)
+    2. the use of push_back() for vector
+    3. the use of upper_bound() and erase() for hash map (both return an iterator)
+    (also pair comparison mechanism) (++ or -- for iterating)
+*/
