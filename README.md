@@ -7,4 +7,4 @@
 
 # why am I doing this?
 
-# Algos are find + wanna pratice C++ + don't wanna get wasted during holiday. :)
+# Answer: Algos are fun + wanna pratice C++ + don't wanna get wasted during holiday. :)
