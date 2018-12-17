@@ -100,11 +100,39 @@ public:
 };
 
 
-//a faster approach:
+//a faster & simplier approach:
+//dont need to store K layers of solution
+//keep directions in an array
+//compute based on previous states only
 class Solution {
+	int dy[8] = {1,1,-1,-1,2,2,-2,-2};
+	int dx[8] = {2,-2,2,-2,1,-1,1,-1};
 public:
-	double A(int N, int r, int c){
-		
+	double knightProbability(int N, int K, int r, int c) {
+		if(K == 0)
+			return 1.0;
+		vector<vector<double>> dp1(N,vector<double>(N,0.0));
+		dp1[r][c] = 1.0;
+		for(int k = 0; k < K; k++){
+			vector<vector<double>> dp2(N,vector<double>(N,0.0));
+			for(int i = 0; i < N; i++){
+				for(int j = 0; j < N; j++){
+					if(dp1[i][j] == 0)continue;
+					for(int m = 0; m < 8; m++){
+						int x = j+dy[m], y = i+dx[m];
+						if(x<0 or y<0 or x>=N or y>=N)continue;
+						dp2[y][x] += dp1[i][j]/8.0;
+					}
+				}
+			}
+			dp1 = dp2;	
+		}
+		double result = 0.0;
+		for(int i = 0; i < N; i++){
+			for(int j = 0; j < N; j++){
+				result += dp1[i][j];
+			}
+		}return result;
 	}
 };
 
