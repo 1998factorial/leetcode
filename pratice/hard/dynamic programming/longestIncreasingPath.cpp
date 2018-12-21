@@ -24,7 +24,6 @@ Moving diagonally is not allowed.
 
 //try dfs
 
-
 class Solution {
 public:
 	int dir[4][2] = {{0,1},{0,-1},{1,0},{-1,0}};
@@ -34,7 +33,7 @@ public:
 		for(int x = 0; x < 4; x++){
 			int dj = j + dir[x][0],di = i + dir[x][1];
 			if(dj<0 or dj>=m or di<0 or di>=n or A[i][j] >= A[di][dj])continue; //out of bound/not increasing
-			else mx = max(mx,dfs(A,di,dj,dp,n,m));//see if path start with A[di][dj] is longer
+			mx = max(mx,dfs(A,di,dj,dp,n,m));//see if path start with A[di][dj] is longer
 		}
 		dp[i][j] = mx+1;
 		return mx+1; //plus A[i][j]
@@ -55,9 +54,4 @@ public:
         return ans;
     }
 };
-
-
-
-
-
 
