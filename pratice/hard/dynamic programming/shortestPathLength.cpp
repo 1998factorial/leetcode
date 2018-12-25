@@ -27,6 +27,7 @@ Explanation: One possible path is [0,1,4,2,3]
 class Solution {
 public:
     int shortestPathLength(vector<vector<int>>& G) {
+    	
     }
 };
 
