@@ -22,14 +22,28 @@ Output: 4
 Explanation: One possible path is [0,1,4,2,3]
 */
 
-//let dp[i][j] = "length of shortest path from i to j"
-#define MAX_LEN 10000000
+
+//we use binary to store the status
+
 class Solution {
 public:
     int shortestPathLength(vector<vector<int>>& G) {
-    	
+    	int n = G.size();
+    	if()
+
     }
 };
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,3 +1,9 @@
+/*
+Input: fronts = [1,2,4,4,7], backs = [1,3,4,1,3]
+Output: 2
+Explanation: If we flip the second card, the fronts are [1,3,4,4,7] and the backs are [1,2,4,1,3].
+We choose the second card, which has number 2 on the back, and it isn't on the front of any card, so 2 is good.
+*/
 class Solution {
 public:
     int flipgame(vector<int>& fronts, vector<int>& backs) {
