@@ -23,18 +23,3 @@ public:
         return ans;
     }
 };
-
-
-// union find solution
-
-class Solution {
-public:
-    int removeStones(vector<vector<int>>& stones) {
-
-
-    }
-};
-
-
-
-
