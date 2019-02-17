@@ -14,7 +14,6 @@ class Solution {
 public:
     
     void dfs(vector<int>& ans, int from, int dis, vector<bool>& seen){
-        cout << from << '\n';
         if(!dis){
             ans.push_back(from);
             return;
