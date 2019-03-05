@@ -31,9 +31,11 @@ public:
             for(int j = 0; j < n; j++){
                 if(!dp[i][j])continue; //(i,j) not reachable
                 for(int k = 0; k < n; k++){
-                    if((1 << k) & i)continue; //
-                    if(!sum[j][k])continue;
+                    if((1 << k) & i)continue; // A[k] is used
+                    if(!sum[j][k])continue; //A[j]+A[k] is not perfect square
                     if(k > 0 && !((1 << (k-1)) & i) && A[k] == A[k-1])continue;
+                    //avoid duplicate by chooing number that equals to A[k] appears in
+                    //the array first
                     dp[(1 << k)|i][k] += dp[i][j];
                 }
             }
