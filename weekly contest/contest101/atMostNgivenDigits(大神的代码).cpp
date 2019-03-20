@@ -26,6 +26,7 @@ public:
     FILL(dp, 0);
     dp[0][0][0] = 1;
     D.push_back("0");
+    
     REP(i,1,sz+1) {
       int d = ds[i - 1];
       REP(pt,0,2) {
